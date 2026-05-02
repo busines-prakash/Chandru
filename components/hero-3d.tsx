@@ -4,6 +4,7 @@ import { Canvas, useLoader } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Environment, Html } from '@react-three/drei';
 import { useRef, useEffect, useState, useMemo } from 'react';
 import * as THREE from 'three';
+// @ts-ignore - Suppressing TS error for three examples import
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { motion } from 'framer-motion';
 
@@ -26,7 +27,7 @@ function DroneMesh() {
   }, [obj]);
 
   useEffect(() => {
-    obj.traverse((child) => {
+    obj.traverse((child: THREE.Object3D) => {
       if ((child as THREE.Mesh).isMesh) {
         const mesh = child as THREE.Mesh;
         mesh.castShadow = true;
@@ -53,7 +54,9 @@ function DroneMesh() {
               mat.color = color;
               mat.metalness = 0.5;
               mat.roughness = 0.6;
-              mat.clearcoat = 0.2;
+              if (mat instanceof THREE.MeshPhysicalMaterial) {
+                mat.clearcoat = 0.2;
+              }
               mat.envMapIntensity = 1.5;
               mat.needsUpdate = true;
               return mat;
@@ -66,7 +69,9 @@ function DroneMesh() {
             mat.color = color;
             mat.metalness = 0.5;
             mat.roughness = 0.6;
-            mat.clearcoat = 0.2;
+            if (mat instanceof THREE.MeshPhysicalMaterial) {
+              mat.clearcoat = 0.2;
+            }
             mat.envMapIntensity = 1.5;
             mat.needsUpdate = true;
             mesh.material = mat;
