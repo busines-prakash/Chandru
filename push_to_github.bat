@@ -1,4 +1,7 @@
 @echo off
+echo Setting up Git identity...
+git config user.email "itored117@gmail.com"
+git config user.name "editor"
 echo Initializing Git...
 git init
 git add .
