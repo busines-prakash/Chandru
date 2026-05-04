@@ -1,4 +1,4 @@
-import { Hero3D } from '@/components/hero-3d'
+import { HeroSection } from '@/components/hero-section'
 import { AboutSection } from '@/components/about-section'
 import { ExperienceSection } from '@/components/experience-section'
 import { SkillsSection } from '@/components/skills-section'
@@ -8,7 +8,7 @@ import { ContactSection } from '@/components/contact-section'
 export function App() {
   return (
     <main className="w-full bg-slate-950">
-      <Hero3D />
+      <HeroSection />
       <AboutSection />
       <ExperienceSection />
       <SkillsSection />
