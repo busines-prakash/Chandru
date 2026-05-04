@@ -50,8 +50,8 @@ export function AboutSection() {
             </div>
 
             <p className="text-lg text-slate-300 leading-relaxed">
-              An experienced UAV System Engineer with 4+ years of expertise in drone operations, 
-              system integration, and geospatial surveying. I am known for delivering high-quality 
+              An experienced UAV System Engineer with 4+ years of expertise in drone operations,
+              system integration, and geospatial surveying. I am known for delivering high-quality
               results with a strong focus on safety, system maintenance, and teamwork across diverse industries.
             </p>
 
