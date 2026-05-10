@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export function HeroSection() {
   return (
     <div className="w-full h-screen relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 flex flex-col items-center justify-center px-4">
-      
+
       {/* Background visual elements */}
       <div className="absolute inset-0 z-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-[128px]" />
@@ -22,7 +22,7 @@ export function HeroSection() {
             Chandru S
           </h1>
           <h2 className="text-2xl md:text-4xl text-sky-400 font-semibold drop-shadow-md">
-            UAV System Engineer
+            UAV System Engineer & Pilot
           </h2>
         </motion.div>
       </div>

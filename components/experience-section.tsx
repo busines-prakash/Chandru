@@ -4,24 +4,10 @@ import { motion } from 'framer-motion';
 
 const experiences = [
   {
-    title: 'UAV System Engineer',
-    company: 'Hawking Defence Services Private Limited',
-    location: 'Thiruvallur',
-    period: 'Feb 2025 - Present',
-    description: 'System integration, design, and development of micro, small, and medium multirotor drones',
-    achievements: [
-      'PID tuning and calibration for optimal drone flight performance',
-      'Flight testing and validation using telemetry data analysis',
-      'Hardware/software troubleshooting including GPS and sensor integration',
-      'R&D documentation and compliance reporting',
-      'Technical calculations for thrust, endurance, and CG balance'
-    ]
-  },
-  {
     title: 'UAV System Engineer & Pilot',
     company: 'Hawking Robotics Private Limited',
     location: 'Chennai',
-    period: 'Jan 2024 - Jan 2025',
+    period: 'Jan 2024 - Present',
     description: 'Drone engineering and piloting for complex system integration and mapping applications',
     achievements: [
       'Assembly and testing of Fixed Wing EVTOL aircraft',

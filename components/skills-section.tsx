@@ -134,7 +134,7 @@ export function SkillsSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-300">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-cyan-400 rounded-full" />
-              <span>FPV Drone Certification (Elios 2, 3 & Mavic 3T)</span>
+              <span>FPV Drone Flying</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-cyan-400 rounded-full" />
