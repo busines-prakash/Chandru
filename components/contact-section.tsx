@@ -1,146 +1,179 @@
 'use client';
 
+import React from 'react';
 import { motion } from 'framer-motion';
+import { Phone, Mail, Linkedin, MapPin, Globe, ExternalLink } from 'lucide-react';
+
+interface ContactInfoProps {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+  href?: string;
+}
+
+const ContactInfo = ({ icon, label, value, href }: ContactInfoProps) => (
+  <motion.div
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 }
+    }}
+    className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-800 hover:border-blue-500/50 p-6 rounded-2xl transition-all duration-300"
+  >
+    <div className="flex items-start gap-4">
+      <div className="p-3 bg-blue-500/10 rounded-xl text-blue-400 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all duration-300">
+        {icon}
+      </div>
+      <div>
+        <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mb-1">{label}</p>
+        {href ? (
+          <a 
+            href={href} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-white font-bold text-base hover:text-blue-400 transition-colors flex items-center gap-2"
+          >
+            {value}
+            <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+          </a>
+        ) : (
+          <p className="text-white font-bold text-base">{value}</p>
+        )}
+      </div>
+    </div>
+  </motion.div>
+);
 
 export function ContactSection() {
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
+  const stats = [
+    { label: "Experience", value: "4+", unit: "Years" },
+    { label: "Area Mapped", value: "150+", unit: "Sq.km" },
+    { label: "Area Sprayed", value: "400+", unit: "Acres" },
+    { label: "Surveyed", value: "1000+", unit: "Km" },
+  ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-900 via-blue-900 to-slate-900 text-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Let&apos;s Connect
-          </h2>
-          <p className="text-xl text-slate-300">
-            Ready to discuss your UAV and drone projects? Feel free to reach out!
-          </p>
-        </motion.div>
+    <section className="py-24 bg-slate-950 text-white relative overflow-hidden" id="contact">
+      {/* Background Orbs */}
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-[120px] pointer-events-none" />
 
-        <motion.div
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                staggerChildren: 0.2,
-              },
-            },
-          }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
-        >
-          {/* Phone */}
-          <motion.a
-            variants={itemVariants}
-            href="tel:+917868038227"
-            className="group bg-slate-800 bg-opacity-50 backdrop-blur border border-blue-500 border-opacity-30 hover:border-opacity-100 rounded-lg p-8 text-center transition duration-300"
-          >
-            <div className="text-4xl mb-4 group-hover:scale-110 transition transform">
-              📞
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-            <p className="text-blue-400 font-semibold hover:text-cyan-400">
-              +91 7868038227
-            </p>
-          </motion.a>
-
-          {/* Email */}
-          <motion.a
-            variants={itemVariants}
-            href="mailto:chandrus625@gmail.com"
-            className="group bg-slate-800 bg-opacity-50 backdrop-blur border border-blue-500 border-opacity-30 hover:border-opacity-100 rounded-lg p-8 text-center transition duration-300"
-          >
-            <div className="text-4xl mb-4 group-hover:scale-110 transition transform">
-              ✉️
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-            <p className="text-blue-400 font-semibold hover:text-cyan-400 break-all">
-              chandrus625@gmail.com
-            </p>
-          </motion.a>
-
-          {/* Location */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-start">
+          
+          {/* Left Side: Text & Contact Grid */}
           <motion.div
-            variants={itemVariants}
-            className="bg-slate-800 bg-opacity-50 backdrop-blur border border-blue-500 border-opacity-30 rounded-lg p-8 text-center"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <div className="text-4xl mb-4">📍</div>
-            <h3 className="text-xl font-bold text-white mb-2">Location</h3>
-            <p className="text-blue-400 font-semibold">
-              Sivaganga, Tamil Nadu<br />
-              India
-            </p>
+            <span className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4 block">Get in Touch</span>
+            <h2 className="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight">
+              Let&apos;s Build the Future of <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">UAVs Together</span>
+            </h2>
+            
+
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ staggerChildren: 0.1 }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12"
+            >
+              <ContactInfo 
+                icon={<Phone size={24} />} 
+                label="Phone" 
+                value="+91 7868038227" 
+                href="tel:+917868038227" 
+              />
+              <ContactInfo 
+                icon={<Mail size={24} />} 
+                label="Email" 
+                value="chandrus625@gmail.com" 
+                href="mailto:chandrus625@gmail.com" 
+              />
+              <ContactInfo 
+                icon={<Linkedin size={24} />} 
+                label="LinkedIn" 
+                value="Professional Profile" 
+                href="https://www.linkedin.com/in/chandru-s-88bb58259/" 
+              />
+              <ContactInfo 
+                icon={<MapPin size={24} />} 
+                label="Location" 
+                value="Sivaganga, TN, India" 
+              />
+            </motion.div>
+
+            {/* Quick Stats Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {stats.map((stat, idx) => (
+                <div key={idx} className="bg-slate-900/30 border border-slate-800/50 p-4 rounded-2xl">
+                  <div className="text-2xl font-bold text-white">{stat.value}</div>
+                  <div className="text-slate-500 text-xs font-medium">{stat.unit} {stat.label}</div>
+                </div>
+              ))}
+            </div>
           </motion.div>
-        </motion.div>
 
-        {/* Quick Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
-        >
-          <div className="bg-blue-900 bg-opacity-30 border border-blue-500 border-opacity-50 rounded-lg p-6 text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">4+</div>
-            <p className="text-slate-300">Years Experience</p>
-          </div>
-          <div className="bg-blue-900 bg-opacity-30 border border-blue-500 border-opacity-50 rounded-lg p-6 text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">150+</div>
-            <p className="text-slate-300">Sq.km Mapped</p>
-          </div>
-          <div className="bg-blue-900 bg-opacity-30 border border-blue-500 border-opacity-50 rounded-lg p-6 text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">400+</div>
-            <p className="text-slate-300">Acres Sprayed</p>
-          </div>
-          <div className="bg-blue-900 bg-opacity-30 border border-blue-500 border-opacity-50 rounded-lg p-6 text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">1000+</div>
-            <p className="text-slate-300">Km Surveyed</p>
-          </div>
-        </motion.div>
+          {/* Right Side: Language & Visual Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="bg-gradient-to-br from-slate-900 to-slate-950 p-6 md:p-8 rounded-[2.5rem] border border-slate-800 shadow-2xl relative overflow-hidden group">
+              <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
+                <Globe className="text-blue-500 mb-6" size={48} />
+                <h3 className="text-2xl font-bold text-white mb-8">Language Proficiency</h3>
+                
+                <div className="space-y-8">
+                  <div>
+                    <div className="flex justify-between mb-3">
+                      <span className="text-white font-bold">Tamil</span>
+                      <span className="text-blue-400 font-bold">Native</span>
+                    </div>
+                    <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "100%" }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                        className="bg-gradient-to-r from-blue-600 to-cyan-500 h-full rounded-full"
+                      />
+                    </div>
+                  </div>
 
-        {/* Languages */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-slate-800 bg-opacity-50 backdrop-blur border border-blue-500 border-opacity-30 rounded-lg p-8"
-        >
-          <h3 className="text-2xl font-bold text-blue-400 mb-6">Languages</h3>
-          <div className="space-y-4">
-            <div>
-              <div className="flex justify-between mb-2">
-                <span className="text-white font-semibold">Tamil (Native)</span>
-                <span className="text-blue-400">Native</span>
-              </div>
-              <div className="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-full w-full" />
+                  <div>
+                    <div className="flex justify-between mb-3">
+                      <span className="text-white font-bold">English</span>
+                      <span className="text-blue-400 font-bold">Professional (B1-B2)</span>
+                    </div>
+                    <div className="w-full bg-slate-800 h-2.5 rounded-full overflow-hidden">
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "80%" }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.7 }}
+                        className="bg-gradient-to-r from-blue-600 to-cyan-500 h-full rounded-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-12 p-6 bg-blue-500/5 rounded-2xl border border-blue-500/10">
+                  <p className="text-slate-400 text-sm italic">
+                    "Driving innovation in UAV technology through engineering excellence and operational precision."
+                  </p>
+                </div>
               </div>
             </div>
-            <div>
-              <div className="flex justify-between mb-2">
-                <span className="text-white font-semibold">English</span>
-                <span className="text-blue-400">B1-B2 Level</span>
-              </div>
-              <div className="w-full bg-slate-700 rounded-full h-2 overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-full w-4/5" />
-              </div>
-            </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -2,7 +2,16 @@
 
 import { motion } from 'framer-motion';
 
-const experiences = [
+interface Experience {
+  title: string;
+  company: string;
+  location: string;
+  period: string;
+  description: string;
+  achievements: string[];
+}
+
+const experiences: Experience[] = [
   {
     title: 'UAV System Engineer & Pilot',
     company: 'Hawking Robotics Private Limited',

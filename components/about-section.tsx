@@ -49,34 +49,32 @@ export function AboutSection() {
               <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded" />
             </div>
 
-            <p className="text-lg text-slate-300 leading-relaxed">
-              An experienced UAV System Engineer with 4+ years of expertise in drone operations,
-              system integration, and geospatial surveying. I am known for delivering high-quality
-              results with a strong focus on safety, system maintenance, and teamwork across diverse industries.
+            <p className="text-xl text-slate-200 leading-relaxed font-medium">
+              UAV Engineer with hands-on experience in ArduPilot & PX4 systems, drone integration, VTOL & multirotor operations, aerial mapping, LiDAR surveying, payload integration, and autonomous mission execution. Skilled in UAV assembly, parameter tuning, PPK geotagging, flight testing, and Pix4D data processing for industrial drone applications.
             </p>
 
-            <div className="space-y-4">
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+            <div className="space-y-6 pt-4">
+              <div className="flex items-start gap-5">
+                <div className="w-2.5 h-2.5 bg-blue-400 rounded-full mt-2.5 flex-shrink-0 shadow-[0_0_10px_rgba(96,165,250,0.5)]" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">System Integration & Design</h3>
-                  <p className="text-slate-400">Experience in micro, small, and medium multirotor drone design and development</p>
+                  <h3 className="font-bold text-xl text-white mb-2">System Integration & Design</h3>
+                  <p className="text-slate-300 text-lg leading-relaxed">Experience in micro, small, and medium multirotor drone design and development.</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+              <div className="flex items-start gap-5">
+                <div className="w-2.5 h-2.5 bg-blue-400 rounded-full mt-2.5 flex-shrink-0 shadow-[0_0_10px_rgba(96,165,250,0.5)]" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Mission-Critical Operations</h3>
-                  <p className="text-slate-400">Expertise in DGPS operations, thermal inspections, and large-scale surveying projects</p>
+                  <h3 className="font-bold text-xl text-white mb-2">Mission-Critical Operations</h3>
+                  <p className="text-slate-300 text-lg leading-relaxed">Expertise in DGPS operations, thermal inspections, and large-scale surveying projects.</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0" />
+              <div className="flex items-start gap-5">
+                <div className="w-2.5 h-2.5 bg-blue-400 rounded-full mt-2.5 flex-shrink-0 shadow-[0_0_10px_rgba(96,165,250,0.5)]" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">Flight Performance Optimization</h3>
-                  <p className="text-slate-400">PID tuning, calibration, and validation using telemetry data analysis</p>
+                  <h3 className="font-bold text-xl text-white mb-2">Flight Performance Optimization</h3>
+                  <p className="text-slate-300 text-lg leading-relaxed">PID tuning, calibration, and validation using telemetry data analysis.</p>
                 </div>
               </div>
             </div>
