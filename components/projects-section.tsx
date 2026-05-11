@@ -87,14 +87,14 @@ const projects: Project[] = [
     impact: "",
     images: [
       {
-        src: pilot7,
-        title: "A200 Aerial Mapping",
-        description: "Performed aerial mapping and survey operations using the A200 Drone for beach and mining survey applications. Conducted complete flight missions including mission planning, autonomous flight execution, telemetry monitoring, and on-field UAV operations to capture accurate aerial survey data. After successful flight completion, processed the collected mapping data using Pix4D to generate orthomosaic outputs, mapping models, and survey reports. Experienced in end-to-end mapping workflows from flight operations to data processing and final report submission for industrial survey projects."
-      },
-      {
         src: pilot8,
         title: "Striver Mini VTOL Survey",
         description: "Handled complete aerial mapping operations using the Striver Mini VTOL platform for large-area survey missions covering 800+ sq. ft. Performed mission planning, autonomous flight execution, telemetry monitoring, and field operations for accurate aerial data collection. Worked with Emlid PPK systems using both base and rover setups to achieve high-precision geotagging and improved mapping accuracy. Responsible for daily geotagging workflows for all completed flight missions and ensuring proper synchronization of captured survey data. After mission completion, processed aerial datasets using Pix4D to generate mapping outputs, orthomosaics, and client-required deliverables. Experienced in complete end-to-end survey workflow including UAV operations, PPK processing, geotagging, data validation, and final report submission."
+      },
+      {
+        src: pilot7,
+        title: "A200 Aerial Mapping",
+        description: "Performed aerial mapping and survey operations using the A200 Drone for beach and mining survey applications. Conducted complete flight missions including mission planning, autonomous flight execution, telemetry monitoring, and on-field UAV operations to capture accurate aerial survey data. After successful flight completion, processed the collected mapping data using Pix4D to generate orthomosaic outputs, mapping models, and survey reports. Experienced in end-to-end mapping workflows from flight operations to data processing and final report submission for industrial survey projects."
       },
       {
         src: pilot9,
