@@ -176,7 +176,6 @@ export function ProjectsSection() {
           transition={{ duration: 0.6 }}
           className="mb-20 text-center"
         >
-          <span className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4 block">Portfolio Showcase</span>
           <h2 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
             Featured <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</span>
           </h2>
@@ -199,13 +198,13 @@ export function ProjectsSection() {
             >
               {/* Image Container */}
               <div className="relative h-80 w-full overflow-hidden">
-                <img 
-                  src={project.images[0].src} 
-                  alt={project.title} 
+                <img
+                  src={project.images[0].src}
+                  alt={project.title}
                   className="w-full h-full object-cover transition duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80" />
-                
+
 
               </div>
 
@@ -269,7 +268,7 @@ export function ProjectsSection() {
               <X size={24} />
             </motion.button>
 
-            <div 
+            <div
               className="relative w-full max-w-7xl h-full flex flex-col md:flex-row items-center justify-center gap-12"
               onClick={(e) => e.stopPropagation()}
             >
@@ -289,7 +288,7 @@ export function ProjectsSection() {
                       className="max-h-full max-w-full object-contain rounded-3xl shadow-[0_0_100px_rgba(37,99,235,0.1)] border border-white/5"
                       alt={selectedProject.images[currentImageIndex].title}
                     />
-                    
+
                     {/* Floating Title Overlay */}
                     {selectedProject.images[currentImageIndex].title && (
                       <div className="absolute bottom-6 left-6 right-6 p-6 bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-2xl opacity-0 group-hover/modal:opacity-100 transition-opacity duration-300 hidden md:block">
@@ -314,12 +313,12 @@ export function ProjectsSection() {
                     >
                       <ChevronRight size={28} className="group-hover:translate-x-1 transition-transform" />
                     </button>
-                    
+
                     {/* Mobile Navigation */}
                     <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-6 md:hidden">
-                      <button onClick={prevImage} className="p-3 bg-white/10 rounded-full text-white"><ChevronLeft size={24}/></button>
+                      <button onClick={prevImage} className="p-3 bg-white/10 rounded-full text-white"><ChevronLeft size={24} /></button>
                       <span className="text-white font-bold text-sm">{currentImageIndex + 1} / {selectedProject.images.length}</span>
-                      <button onClick={nextImage} className="p-3 bg-white/10 rounded-full text-white"><ChevronRight size={24}/></button>
+                      <button onClick={nextImage} className="p-3 bg-white/10 rounded-full text-white"><ChevronRight size={24} /></button>
                     </div>
                   </>
                 )}
@@ -339,7 +338,7 @@ export function ProjectsSection() {
                   </h3>
                   <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
                 </div>
-                
+
                 <div className="bg-slate-800/40 p-6 rounded-2xl border border-white/5 mb-8">
                   <p className="text-slate-300 text-base leading-relaxed">
                     {selectedProject.images[currentImageIndex].description}
@@ -353,9 +352,8 @@ export function ProjectsSection() {
                         <button
                           key={idx}
                           onClick={() => setCurrentImageIndex(idx)}
-                          className={`h-1.5 rounded-full transition-all duration-500 ${
-                            idx === currentImageIndex ? 'w-10 bg-blue-500' : 'w-3 bg-white/20 hover:bg-white/40'
-                          }`}
+                          className={`h-1.5 rounded-full transition-all duration-500 ${idx === currentImageIndex ? 'w-10 bg-blue-500' : 'w-3 bg-white/20 hover:bg-white/40'
+                            }`}
                         />
                       ))}
                     </div>
