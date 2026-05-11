@@ -10,7 +10,7 @@ import eng3 from '../Engineer/3.jpeg';
 import eng4 from '../Engineer/4.jpeg';
 import eng5 from '../Engineer/5.jpeg';
 import eng6 from '../Engineer/6.jpeg';
-
+import eng12 from '../Engineer/12.jpeg';
 import pilot7 from '../Pilot/7.jpeg';
 import pilot8 from '../Pilot/8.jpeg';
 import pilot9 from '../Pilot/9.jpeg';
@@ -74,6 +74,11 @@ const projects: Project[] = [
         src: eng6,
         title: "Autonomous Egg Dropping Drone",
         description: "Developed an autonomous egg dropping drone project for Sai India with fully automated mission execution capabilities. Configured the UAV to perform autonomous takeoff, waypoint navigation, precision landing, payload release, and automatic return-to-home operations based on predefined mission inputs. Worked on mission planning, flight controller configuration, payload mechanism integration, parameter tuning, and overall system testing to achieve reliable autonomous operation. Successfully implemented automated egg drop functionality with stable navigation and controlled landing performance. Experienced in autonomous UAV workflows, mission automation, payload delivery systems, waypoint navigation, and flight testing."
+      },
+      {
+        src: eng12,
+        title: "Y4 Configuration Drone Prototype",
+        description: "Developed and successfully completed a Y4 configuration drone prototype using the ArduPilot flight control system. Worked on complete UAV integration including frame assembly, wiring, motor & ESC setup, parameter tuning, flight controller configuration, and system testing. Successfully achieved stable flight performance through in-house testing and troubleshooting. Experienced in multirotor prototype development, ArduPilot configuration, UAV integration, and flight validation workflows."
       }
     ]
   },
