@@ -15,7 +15,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     title: 'UAV System Engineer & Pilot',
-    company: 'Hawking Robotics Private Limited',
+    company: 'Hawking Robotics and Technology Pvt Ltd',
     location: 'Chennai',
     period: 'Jan 2024 - Present',
     description: 'Drone engineering and piloting for complex system integration and mapping applications',
@@ -75,9 +75,8 @@ export function ExperienceSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                }`}
+                className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                  }`}
               >
                 {/* Timeline Dot */}
                 <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-950 z-20" />
@@ -87,7 +86,7 @@ export function ExperienceSection() {
                   <div className="group bg-slate-900/40 backdrop-blur-xl border border-slate-800 p-8 rounded-3xl hover:border-blue-500/30 transition-all duration-500 relative overflow-hidden">
                     {/* Hover Glow */}
                     <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
+
                     <div className="relative z-10">
                       <div className="flex flex-wrap items-center gap-3 mb-4 text-sm font-bold text-blue-400 uppercase tracking-widest">
                         <Calendar size={14} />
@@ -97,7 +96,7 @@ export function ExperienceSection() {
                       <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                         {exp.title}
                       </h3>
-                      
+
                       <div className="flex items-center gap-4 mb-6">
                         <div className="flex items-center gap-1.5 text-slate-300 font-semibold">
                           <Briefcase size={16} className="text-blue-500" />
