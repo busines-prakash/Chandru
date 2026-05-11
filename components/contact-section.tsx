@@ -20,7 +20,7 @@ const ContactInfo = ({ icon, label, value, href }: ContactInfoProps) => (
     className="group relative bg-slate-900/40 backdrop-blur-xl border border-slate-800 hover:border-blue-500/40 p-8 rounded-3xl transition-all duration-500 overflow-hidden"
   >
     <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    
+
     <div className="flex items-start gap-5 relative z-10">
       <div className="p-4 bg-slate-800 rounded-2xl text-blue-400 group-hover:scale-110 group-hover:bg-blue-500/10 transition-all duration-500">
         {icon}
@@ -49,8 +49,8 @@ export function ContactSection() {
   const stats = [
     { label: "Experience", value: "4+", unit: "Years" },
     { label: "Area Mapped", value: "800+", unit: "Sq.km" },
-    { label: "Area Sprayed", value: "1000+", unit: "Acres" },
-    { label: "Surveyed", value: "5000+", unit: "Km" },
+    { label: "Area Sprayed", value: "400+", unit: "Acres" },
+    { label: "Surveyed", value: "1000+", unit: "Km" },
   ];
 
   return (
@@ -73,7 +73,7 @@ export function ContactSection() {
             <h2 className="text-5xl md:text-6xl font-extrabold mb-8 tracking-tight leading-tight">
               Let&apos;s Build the Future of <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">UAVs Together</span>
             </h2>
-            
+
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -128,7 +128,7 @@ export function ContactSection() {
           >
             <div className="bg-gradient-to-br from-slate-900 to-slate-950 p-10 md:p-12 rounded-[3rem] border border-slate-800 shadow-2xl relative overflow-hidden group">
               <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-10">
                   <div className="p-4 bg-blue-500/10 rounded-2xl text-blue-500">
